@@ -9,6 +9,7 @@
 
 body{
     background-color: #1a1818;
+    padding: 0px 15px;
 }
 
 header{
@@ -31,20 +32,6 @@ header *{
     font-size: 2rem;
 }
 
-.btn-rows{
-    display: flex;    
-    gap: 2.5px;    
-}
-
-.btn{
-    background-color: #414141;    
-    border: 1px solid rgba(105, 105, 105, 0.1);
-    color: white;    
-    padding: 15px;
-    text-align: center;
-    flex: 1;    
-}
-
 #display-equation{
     display: flex;
     justify-content: end;
@@ -58,3 +45,23 @@ header *{
     color: white;
     font-weight:lighter;
 }
+
+.btn-rows{
+    display: flex;    
+    gap: 2.5px;    
+}
+
+.btn{
+    background-color: #414141;    
+    border: 1px solid rgba(105, 105, 105, 0.1);
+    color: white;    
+    padding: 15px;
+    text-align: center;
+    flex: 1; 
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #1a1818;
+}
+

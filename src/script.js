@@ -1,3 +1,30 @@
+// DOM
+const btnsCalculatorHTML = document.getElementById("btns-calculator");
+// Primitive Data
+// +, -, *, /, AC, Del, ., =
+// keypads
+const keypads = 
+[
+    ["AC", " = "]
+    [1, 2, 3, "+"],
+    [4, 5, 6, " - "],
+    [7, 8, 9, " +"],
+    [" Del ", 0, " . ", " / "]
+];
+
+keypads.map((row)=>{
+    btnsCalculatorHTML.innerHTML += 
+    `
+    <div class="btn-rows">
+        <div class="btn">1</div>
+        <div class="btn">1</div>
+        <div class="btn">1</div>
+        <div class="btn">1</div>
+    </div>
+    `
+})
+
+
 // Calculator Operation
 function operate(num1, op, num2){
     switch(op){
