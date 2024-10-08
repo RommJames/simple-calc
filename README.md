@@ -1,4 +1,4 @@
-# SimpleCalc: Your Go-To GUI Calculator
+# SimpleCalc: Your Go-To Web-based Calculator
 
 
 Welcome to **SimpleCalc**, an intuitive on-screen calculator designed for all your mathematical needs. With a sleek graphical user interface, you can perform calculations effortlessly, whether for daily tasks or complex math problems.
