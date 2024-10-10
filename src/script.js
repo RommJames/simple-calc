@@ -5,7 +5,7 @@ const btnsCalculatorHTML = document.getElementById("btns-calculator");
 // keypads
 const keypads = 
 [
-    ["AC", " = "]
+    ["AC", " = "],
     [1, 2, 3, "+"],
     [4, 5, 6, " - "],
     [7, 8, 9, " +"],
@@ -13,15 +13,18 @@ const keypads =
 ];
 
 keypads.map((row)=>{
-    btnsCalculatorHTML.innerHTML += 
-    `
-    <div class="btn-rows">
-        <div class="btn">1</div>
-        <div class="btn">1</div>
-        <div class="btn">1</div>
-        <div class="btn">1</div>
-    </div>
-    `
+    const btnRows = document.createElement("div");
+    btnRows.setAttribute("class", "btn-rows");
+    btnsCalculatorHTML.append(btnRows);
+
+    row.map((btnValue)=>{
+        const btn = document.createElement("div");
+        btn.setAttribute("class", "btn"); 
+        btn.textContent = btnValue;                   
+        btnRows.appendChild(btn);
+    })
+
+    
 })
 
 
@@ -58,6 +61,11 @@ function multiply(num1, num2){
 
 function divide(num1, num2){
     return num2 == 0 ? "Error!" : num1 / num2;
+}
+
+// Check if Integer
+function isInt(num){
+    return Number.isInteger(num);
 }
 
 

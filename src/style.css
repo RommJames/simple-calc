@@ -26,7 +26,7 @@ header *{
     max-width: 414px;
     /* min-width: 200px;  */
     background-color: #696969;   
-    border-radius: 15px;
+    border-radius: 10px;
     overflow: hidden;
     margin: 30px auto;
     font-size: 2rem;
@@ -49,6 +49,7 @@ header *{
 .btn-rows{
     display: flex;    
     gap: 2.5px;    
+    margin: 2.5px;    
 }
 
 .btn{
@@ -59,6 +60,11 @@ header *{
     text-align: center;
     flex: 1; 
     cursor: pointer;
+    border-radius: 7px;
+}
+
+.btn-colored{
+    background-color: #5fc313;
 }
 
 .btn:hover{
