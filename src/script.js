@@ -1,15 +1,18 @@
 // DOM
 const btnsCalculatorHTML = document.getElementById("btns-calculator");
+const displayOutputHTML = document.getElementById("display-output");
+const displayInputHTML = document.getElementById("display-input");
+
 // Primitive Data
 // +, -, *, /, AC, Del, ., =
 // keypads
 const keypads = 
 [
-    ["AC", " = "],
+    ["AC", "="],
     [1, 2, 3, "+"],
-    [4, 5, 6, " - "],
-    [7, 8, 9, " +"],
-    [" Del ", 0, " . ", " / "]
+    [4, 5, 6, "-"],
+    [7, 8, 9, "*"],
+    ["Del", 0, ".", "/"]
 ];
 
 keypads.map((row)=>{
@@ -20,7 +23,17 @@ keypads.map((row)=>{
     row.map((btnValue)=>{
         const btn = document.createElement("div");
         btn.setAttribute("class", "btn"); 
-        btn.textContent = btnValue;                   
+        if(!isInt(btnValue)){
+            btn.classList.add("btn-colored")   ;
+        }
+        btn.textContent = btnValue;      
+        btn.addEventListener("click",()=>{
+            clickBtn(btnValue);
+            btn.classList.toggle("btn-clicked");
+            setTimeout(() => {
+                btn.classList.toggle("btn-clicked");
+            }, 300);
+        })
         btnRows.appendChild(btn);
     })
 
@@ -66,6 +79,11 @@ function divide(num1, num2){
 // Check if Integer
 function isInt(num){
     return Number.isInteger(num);
+}
+
+// key functions
+function clickBtn(btnValue){
+    console.log(btnValue);
 }
 
 
