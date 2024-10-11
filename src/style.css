@@ -61,6 +61,7 @@ header *{
     flex: 1; 
     cursor: pointer;
     border-radius: 7px;
+    font-size: 1.5rem;
 }
 
 .btn-colored{
@@ -75,6 +76,11 @@ header *{
 
 .btn-clicked{
     transform: scale(0.9);
-    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* For Removal - Testing */
+#display-output{
+    /* display: none; */
 }
 
